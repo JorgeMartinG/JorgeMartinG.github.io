@@ -1,3 +1,4 @@
+* {margin:0; padding:0}
 /*
  * Theme Name: Pixel Perfect Portfolio
  * Author: Pixel Perfect
@@ -16,26 +17,6 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-}
-/* 
- * Button
- */
-.btn {
-
-}
-
-.btn-inverted {
-
-}
-
-.btn:hover,
-.btn:focus {
-
-}
-
-.btn-inverted:hover,
-.btn-inverted:focus {
-
 }
 
 /* HEADER
@@ -194,7 +175,7 @@ html, body {
 .hero {
 
   background: url(../img/wallpaper.jpg) center no-repeat;
-  height: 100%;
+  height: calc(100% - 60px);
   width: 100%;
   display: table;
   position: relative;
@@ -203,7 +184,6 @@ html, body {
 
 .background-overlay:before {
   content: '';
-  background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -217,27 +197,29 @@ html, body {
   display: table-cell;
   vertical-align: middle;
   position: relative;
+  text-transform: uppercase;
+  font-family:'league gothic';
 }
 
 .hero-content h1 {
-  width: 100%;
+  width:auto;
   font-size: 100px;
   text-align: left;
   margin-left:10%;
-  text-transform: uppercase;
-  font-family:'league gothic';
   letter-spacing:30px;
 }
 
 .hero-content p {
   padding: 0 15px;
   margin: 30px auto 0;
-  text-align: center;
+  text-align: left;
+  margin-left: 20%;
   text-transform: uppercase;
+  letter-spacing:15px;
 }
 
 .hero-content .hero-job {
-  font-size: 18px;
+  font-size: 30px;
 }
 
 .hero-content .hero-job span {
@@ -245,48 +227,95 @@ html, body {
 }
 
 .hero-content .hero-job-desc {
-  font-size: 14px;
   max-width: 700px;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 967px) {
   /* HEADER */
   /* HERO */
   .hero-content h1 {
     font-size: 75px;
+    letter-spacing:15px;
   }
   .hero-content p {
-    margin: 20px auto 0;
+    font-size: 100px;
+    letter-spacing:7px;
+    margin-left:10%;
   }
 }
 
-/* SITEMAIN
-================================================== */
+.site-section{
+  background-color: #1e1e1e;
+  width:100%;
+  height:auto;
+}
+/*
 .site-main {
-  background-color: #1E1E1E;
   z-index: 1;
 }
 
 /*
  * Sections
- */
+
 .site-section {
   padding: 100px 0;
 }
 
 .site-section h2 {
-  font-family: "Varela", sans-serif;
-  margin: 0;
+  font-family:;
+  margin: 0 auto;
   font-size: 32px;
   color: #196fc2;
   text-align: center;
   text-transform: uppercase;
 }
+*/
+.about-section {
+  background-color: #f4f4f4;
+  width:calc(100% - 10px);
+  height:fit-content;
+  margin:0px 5px 0px 5px;
 
+}
+.about-me {
+  width:80%;
+  margin:0 auto;
+  display:flex;
+  flex-wrap:wrap;
+}
+.about-media {
+  flex: 1 1 300px;
+  padding:0px 0px 20px 0px;
+}
+.about-media iframe {
+  width:95%;
+  padding-top:20px
+}
+.about-media img {
+  width:95%;
+}
+.about-content {
+  flex: 1 1 300px;
+  padding-top:20px;
+}
+@media only screen and (max-width: 967px) {
+  /* HEADER */
+  /* HERO */
+  .about-media {
+    flex: 1 1 500px;
+    padding:0px 0px 10px 0px;
+  }
+  .about-media img {
+    width:100%;
+  }
+  .about-media iframe {
+    width:100%;
+  }
+}
 /*
  * Sections: Background;
- */
-.section-background {
+
+ .section-background {
   position: relative;
   background-size: cover;
   padding: 150px 0;
@@ -305,7 +334,8 @@ html, body {
   margin-top: 50px;
 }
 
-/* Sections background: Quote */
+/* Sections background: Quote 
+
 .section-quote {
   background: url(../img/diagmonds-light.png)fixed;
 }
@@ -323,4 +353,26 @@ html, body {
   margin: 0;
   color: #ffffff;
   position: relative;
+}
+/* width */
+::-webkit-scrollbar {
+  border-radius: 9999em;
+  width:5px
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1E1E1E;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f1f1f1;
+  border-radius: 9999em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f4f4f4;
 }
