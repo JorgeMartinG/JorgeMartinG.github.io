@@ -55,7 +55,8 @@ html, body {
 
 /* Navigation */
 .site-navigation {
-  background-color: #1e1e1e;
+  background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-leather.png");
 }
 
 .site-navigation.affix {
@@ -245,8 +246,6 @@ html, body {
 }
 
 .site-section{
-  background-color: #1e1e1e;
-  width:100%;
   height:auto;
 }
 /*
@@ -275,7 +274,7 @@ html, body {
   width:calc(100% - 10px);
   height:fit-content;
   margin:0px 5px 0px 5px;
-
+  border-radius:10px;
 }
 .about-me {
   width:80%;
@@ -324,18 +323,20 @@ html, body {
 /*
  * Sections: Background;
 
+ */
  .section-background {
   position: relative;
   background-size: cover;
-  padding: 150px 0;
-  width: 100%;
+  height:10px;
+  padding:0;
+  width:calc(100% - 10px);
   text-align: center;
 }
 
 .section-background p {
   position: relative;
   margin: 10px 0 0;
-  color: #ffffff;
+  color: #1e1e1e;
 }
 
 .section-background .btn {
@@ -345,8 +346,13 @@ html, body {
 
 /* Sections background: Quote 
 
+
+
+
+*/
 .section-quote {
-  background: url(../img/diagmonds-light.png)fixed;
+  background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-leather.png");
 }
 
 .section-quote p {
