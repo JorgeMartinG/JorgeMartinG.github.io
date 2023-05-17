@@ -279,33 +279,30 @@ html, body {
   margin:0 auto;
   display:flex;
   flex-wrap:wrap;
-  align-items:stretch;
 }
 .about-media {
   width:50%;
-  flex: 1;
+  flex:1 1;
   margin:20px;
   z-index:2;
 }
 .about-media iframe {
   width: 100%;
-  height:50%;
-  order:2;
-  box-shadow: 20px 20px 30px 5px grey;
+  box-shadow: 10px 10px 20px 2px grey;
   z-index:1;
 }
 .about-media img {
   width: 100%;
-  box-shadow: 20px 20px 30px 5px grey;
+  box-shadow: 10px 10px 20px 2px grey;
 }
 .about-content {
   width: 50%;
-  flex:1;
+  flex:1 1;
   margin:20px;
 
 }
 .about-text {
-  width: 100%;
+  width: 90%;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1em;
   text-align: justify;
@@ -317,14 +314,18 @@ html, body {
 @media only screen and (max-width: 967px) {
   /* HEADER */
   /* HERO */
+  .about-me {
+  }
   .about-media {
     padding:0px 0px 10px 0px;
   }
   .about-content {
     order:1;
+    flex:1 1 100%;
   }
   .about-media {
     order:2;
+    flex: 1 1 100%;
   }
   .about-media img {
     display:none;
