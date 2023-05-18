@@ -271,44 +271,66 @@ html, body {
 */
 .about-section {
   background-color: #f4f4f4;
-  height:fit-content;
-  border-radius:10px;
+  height:calc(100% - 60px);
+  padding:2%;
+}
+.about-title {
+  padding:30px 0px 30px 0px;
+  text-align: center;
+  font-family: 'League gothic';
+  font-size: 50px;
+  letter-spacing:10px;
+  color:#232323
 }
 .about-me {
   width:85%;
   margin:0 auto;
+  padding:30px;
   display:flex;
   flex-wrap:wrap;
+  box-shadow: 10px 10px 20px 2px grey;
+  border-radius:10px;
 }
 .about-media {
   width:50%;
+  padding-right:30px;
   flex:1 1;
-  margin:20px;
   z-index:2;
 }
 .about-media iframe {
   width: 100%;
+  margin-bottom:30px;
+  border-radius:10px;
   box-shadow: 10px 10px 20px 2px grey;
   z-index:1;
 }
 .about-media img {
   width: 100%;
+  border-radius:10px;
   box-shadow: 10px 10px 20px 2px grey;
+  z-index:1;
 }
 .about-content {
   width: 50%;
-  flex:1 1;
-  margin:20px;
+  padding-left:30px;
+  flex:1 ;
+  font-family:'SF Pro Display', sans-serif;
 
 }
 .about-text {
-  width: 90%;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  width: 100%;
   font-size: 1em;
   text-align: justify;
 }
 .about-button {
-
+  text-align: center;
+  margin-top:10%
+}
+.about-button input {
+  margin:10px;
+  border:1px solid;
+  border-radius:9999em;
+  padding:10px 30px 10px 30px;
 }
 
 @media only screen and (max-width: 967px) {
@@ -334,7 +356,7 @@ html, body {
 /*
  * Sections: Background;
 
- */
+ 
  .section-background {
   padding:20px;
   position: relative;
@@ -345,7 +367,7 @@ html, body {
 }
 /* Sections background: Quote 
 
-*/
+
 .section-quote {
   background-color: #000000;
   background-image: url("../img/diagmonds-light.png");
