@@ -375,6 +375,8 @@ html, body {
   .about-content {
     order:1;
     flex:1 1 100%;
+    padding-left:10px;
+    padding-right:10px;
   }
   .about-content p {
     padding:10px;
