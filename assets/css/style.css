@@ -360,20 +360,31 @@ html, body {
 }
 
 @media only screen and (max-width: 967px) {
-  .about-media {
-    padding:0px 0px 10px 0px;
+  .about-section {
+    padding:0px;
   }
-  .about-content {
-    order:1;
-    flex:1 1 100%;
+  .about-me {
+    width:100%;
+    border-radius:0px;
   }
   .about-media {
     padding:0;
     order:2;
     flex: 1 1 100%;
   }
+  .about-content {
+    order:1;
+    flex:1 1 100%;
+  }
+  .about-content p {
+    padding:10px;
+  }
+  .about-button {
+    padding-bottom: 40px;
+  }
   .about-media iframe {
     margin-bottom:0px;
+    border-radius:0px;
   }
   .about-media img {
     display:none;
