@@ -173,23 +173,22 @@ html, body {
 /* HERO
 ================================================== */
 .hero {
+  display: table;
+  width: 100%;
+  height: calc(100% - 60px);
   background: url('../img/avatar-byn.png') no-repeat;
   background-color: #1E1E1E;
   background-position:right 10% bottom 0%;
   background-size:35%;
-  height: calc(100% - 60px);
-  width: 100%;
-  display: table;
 }
-
 .hero-filter {
   width:100%;
   height:100%;
   background-image: url('../img/broken-noise.png');
 }
 .hero-content {
-  width:100%;
-  color: #ffffff;
+  width:fit-content;
+  color: #FFF;
   display: table-cell;
   vertical-align: middle;
   position: relative;
@@ -198,14 +197,32 @@ html, body {
 }
 
 .hero-content h1 {
-  width:100%;
+  width: 110%;
+  height: 20%;
   font-size: 100px;
   text-align: left;
-  margin-left:10%;
-  padding-top: 50%;
-  letter-spacing:30px;
+  padding-left:10%;
+  margin-top: 50%;
+  letter-spacing:25px;
+  animation: typing 2s steps(12), blink .5s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
 }
-
+.hero-content p {
+  white-space: nowrap;
+}
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
 .hero-content p {
   padding: 0 15px;
   margin: 30px auto 0;
@@ -231,13 +248,15 @@ html, body {
   /* HEADER */
   /* HERO */
   .hero {
-    background-size:75%;
+    background-size:80%;
   }
   .hero-content h1 {
-    width:80%;
-    padding-top:10%;
-    font-size: 75px;
+    width:110%;
+    height: 15%;
+    margin-top:10%;
+    font-size: 60px;
     letter-spacing:15px;
+    white-space:nowrap;
   }
   .hero-content p {
     font-size: 100px;
@@ -354,9 +373,10 @@ html, body {
 }
 .about-button input {
   margin:10px;
-  border:1px solid;
-  border-radius:9999em;
   padding:10px 30px 10px 30px;
+  border:2px solid #1E1E1E;
+  border-radius:9999em;
+  box-shadow:  33px 33px 66px #BDBDBD, -33px -33px 66px #FFFFFF;
 }
 
 @media only screen and (max-width: 967px) {
