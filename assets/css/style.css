@@ -173,7 +173,7 @@ html, body {
 /* HERO
 ================================================== */
 .hero {
-  background: url(../img/avatar.png) no-repeat;
+  background: url('../img/avatar-byn.png') no-repeat;
   background-color: #1E1E1E;
   background-position:right 10% bottom 0%;
   background-size:35%;
