@@ -331,7 +331,7 @@ html, body {
   width:max-content;
   height:max-content;
   border-radius: 50%;
-  margin:30px auto;
+  margin:0px auto;
   padding:10px;
   background: linear-gradient(145deg, #eeeeee, #c8c8c8);background-color: #DEDEDE;
   box-shadow:  33px 33px 66px #BDBDBD, -33px -33px 66px #FFFFFF;
@@ -369,6 +369,9 @@ html, body {
   .about-me {
     width:100%;
     border-radius:0px;
+  }
+  .about-title {
+    font-size: 30px;
   }
   .about-media {
     padding:0;
@@ -409,7 +412,7 @@ html, body {
   color:#eeeeee
 }
 .proyect-row {
-  width:85%;
+  width:calc(85% - 100px);
   height: auto;
   padding:50px;
   margin:0px auto;
@@ -448,7 +451,11 @@ html, body {
 
 /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 992px) {
+  .proyect-title {
+    font-size:30px;
+  }
   .proyect-row {
+    width:85%;
     flex-direction: column;
     padding:0
   }
