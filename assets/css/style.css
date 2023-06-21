@@ -16,6 +16,9 @@ html, body {
   width: 100%;
   height: 100%;
   margin: 0;
+  background-color: #0e0e0e;
+  background-image: url("../img/dark-matter.png");
+  background-attachment:fixed
   /* padding:0px 5px 0px 5px;*/
 }
 
@@ -273,7 +276,6 @@ html, body {
 
 .about-section {
   background: linear-gradient(145deg, #eeeeee, #c8c8c8);
-  height:calc(100% - 60px);
 }
 .about-title, .skills-title {
   padding:20px 0px 20px 0px;
@@ -452,18 +454,129 @@ html, body {
 /* SKILLS SECTION */
 .skills-section {
   background: linear-gradient(145deg, #eeeeee, #c8c8c8);
-  height:calc(100% - 60px);
+}
+/* -------------------------- Sección de proyectos -------------------------- */
+
+.proyect-section {
+  width: 100%;
+  text-align: center;
+}
+.proyect-section hr {
+  height:1px
+}
+.proyect-section h1 {
+  display: inline-block;
+  padding: 30px;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.proyect-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.proyect {
+  flex: 0 0 400px;
+  height: 80%;
+  padding: 20px;
+}
+.proyect-image {
+  overflow: hidden;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+  border-radius: 5px;
+}
+.proyect-image > img {
+  width: 100%;
+  transform: scale(1);
+  transition: all 0.4s;
+  
+}
+.proyect-image > img:hover {
+  cursor: pointer;
+  transform: scale(1.1); 
+}
+.proyect-image:hover {
+  border: 1px solid rgba(255, 255, 255, 0.25); 
+
+}
+.proyect-desc {
+  text-align: left;
+}
+.proyect-desc h2 {
+  font-size: 26px;
+  color: #fff;
+  font-family: "Prompt",sans-serif;
+  font-weight: 500;
+}
+.proyect-desc p {
+  font-size: 16px;
+  color: #d3d3d4;
+  font-family: "Prompt",sans-serif;
+  font-weight: 100;
+}
+@media only screen and (max-width: 1220px) {
+  .proyect-section {
+      height: fit-content;
+  }
+  .proyect {
+      flex: 0 0 50;
+      transition: all 0.8s;
+  }
 }
 
+/* -------------------------- Fin sección de proyectos -------------------------- */
+.spacing {
+  width: 80%;
+  margin: 50px auto;
+}
+/* -------------------------- Sección de insignias -------------------------- */
+.badge-section {
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+} 
+.badge {
+  width: 150px;
+  padding: 15px 0 15px;
+  border: 1px solid #2e2e2e;
+  background-color: transparent;
+  border-radius: 0px;
+} 
+.badge img {
+  width: 90px;
+  margin-bottom: 15px;
+}
+.badge p {
+  text-align: center;
+  font-family: "Prompt",sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 1445px) {
+  .badge-section {
+      padding: 0px 10px 0px 10px;
+  }
+  .badge {
+      flex: 1 0 21%;
+  }
+}
+@media only screen and (max-width: 740px) {
+  .badge {
+      flex: 1 0 33%;
+  }
+}
+/* -------------------------- Fin sección de insignias -------------------------- */
 
+/* -------------------------- Sección de contacto -------------------------- */
 
-
-
-/* CONTACT SECTION */
 .contact-section {
-  background: #1E1E1E;
-  height:calc(100% - 60px);
-  padding-bottom:40px;
+  width: 100%;
+  background-color: #0e0e0e;
+  text-align: center;
 }
 .contact {
   width:85%;
@@ -555,7 +668,7 @@ html, body {
 /* width */
 ::-webkit-scrollbar {
   border-radius: 9999em;
-  width:5px
+  width:10px
 }
 
 /* Track */
@@ -567,7 +680,6 @@ html, body {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #f1f1f1;
-  border-radius: 9999em;
 }
 
 /* Handle on hover */
