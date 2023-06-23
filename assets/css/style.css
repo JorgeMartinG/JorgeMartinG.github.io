@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 * {margin:0; padding:0}
 /*
  * Theme Name: Pixel Perfect Portfolio
@@ -531,17 +532,19 @@ li > span {
 }
 .proyect-desc h2 {
   padding: 15px 15px 15px 15px;
-  font-size: 26px;
+  font-size: 22px;
   color: #fff;
   font-family: "Prompt",sans-serif;
   font-weight: 500;
+  text-transform: uppercase;
 }
 .proyect-desc p {
   padding: 0px 15px 0px 15px;
-  font-size: 16px;
+  font-size: 15px;
   color: #d3d3d4;
-  font-family: "Prompt",sans-serif;
-  font-weight: 100;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 20px;
+  line-height: 1.42857143;;
 }
 @media only screen and (max-width: 1220px) {
   .proyect-section {
@@ -565,28 +568,13 @@ li > span {
   .proyect-image img {
     max-width: calc(100%)
   }
-  .proyect-desc h2 {
-    width: 100%;
-    text-align: center;
-    font-size: 20px;
-    color: #fff;
-    font-family: "Prompt",sans-serif;
-    font-weight: 500;
-  }
-  .proyect-desc p {
-    width: 100%;
-    padding: 0px 15px 0px 30px;
-    font-size: 15px;
-    color: #d3d3d4;
-    font-family: "Prompt",sans-serif;
-    font-weight: 100;
-  }
 }
 
 /* -------------------------- Fin sección de proyectos -------------------------- */
 .spacing {
   width: 80%;
-  margin: 50px auto;
+  margin: 20px auto;
+  padding-bottom: 20px;
 }
 /* -------------------------- Sección de insignias -------------------------- */
 .badge-section {
@@ -598,7 +586,7 @@ li > span {
 } 
 .badge-card {
   width: 170px;
-  height:170px;
+  height:180px;
   /* perspective: 1000px; -> Efecto 3D */
     -webkit-user-select: none;
     -webkit-touch-callout: none;
@@ -645,10 +633,10 @@ li > span {
   text-transform: uppercase;  
 }
 .badge-card-back h3 {
-  font-family: "Prompt",sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #d3d3d4;
   text-align:left;
-  font-size: 10px;
+  font-size: 11px;
   line-height: 1.8; 
 }
 .badge-card-front, .badge-card-back {
@@ -678,23 +666,26 @@ li > span {
 
 @media only screen and (max-width: 1445px) {
   .badge-section {
+      width: 70%;
       padding: 0px 10px 0px 10px;
   }
   .badge-card {
-      flex: 1 0 21%;
+    min-width: 150px;
+    max-width: 150px;
+      flex: 1 0 20%;
   }
 }
 @media only screen and (max-width: 740px) {
+  .badge-section {
+    width: 100%;
+  }
   .badge-card {
       flex: 1 0 33%;
-      
+      min-width: none;
+      max-width: none;
   }
 }
-@media only screen and (max-width: 390px) {
-  .badge-card {
-      height: 200px;
-  }
-}
+
 
 /* -------------------------- Fin sección de insignias -------------------------- */
 
