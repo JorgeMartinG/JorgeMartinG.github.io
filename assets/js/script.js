@@ -36,3 +36,28 @@ $(function () {
         event.preventDefault();
     });
 }());
+/*
+var cards = document.querySelectorAll('.badge-card');
+
+[...cards].forEach((card)=>{
+  card.addEventListener( 'click', function() {
+    if (card.getElementsByClassName)
+    card.classList.toggle('flipped');
+  });
+});
+*/
+const cards = document.querySelectorAll('.badge-card');
+
+for (const card of cards) {
+  card.addEventListener('click', () => {
+    // Vuelve a su estado original todas las tarjetas excepto la que se hizo clic
+    for (const otherCard of cards) {
+      if (otherCard !== card) {
+        otherCard.classList.remove('flipped');
+      }
+    }
+
+    // Voltea la tarjeta actual
+    card.classList.toggle('flipped');
+  });
+}

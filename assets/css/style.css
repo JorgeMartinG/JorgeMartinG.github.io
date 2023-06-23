@@ -28,6 +28,10 @@ img {
   -o-user-drag: none;
   pointer-events: none;
 }
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
 /* HEADER
 ================================================== */
 .site-header {
@@ -483,11 +487,8 @@ li > span {
 /* -------------------------- Sección de proyectos -------------------------- */
 
 .proyect-section {
-  width: 100%;
+  width: fit-content;
   text-align: center;
-}
-.proyect-section hr {
-  height:1px
 }
 .proyect-section h1 {
   max-width: 100%;
@@ -505,7 +506,7 @@ li > span {
 .proyect {
   flex: 0 0 400px;
   height: 80%;
-  padding: 20px;
+  padding: 15px
 }
 .proyect-image {
   overflow: hidden;
@@ -517,26 +518,26 @@ li > span {
   width: 100%;
   transform: scale(1);
   transition: all 0.4s;
-  
 }
-.proyect-image > img:hover {
+.proyect-image:hover > img {
   cursor: pointer;
   transform: scale(1.1); 
 }
 .proyect-image:hover {
   border: 1px solid rgba(255, 255, 255, 0.25); 
-
 }
 .proyect-desc {
   text-align: left;
 }
 .proyect-desc h2 {
+  padding: 15px 15px 15px 15px;
   font-size: 26px;
   color: #fff;
   font-family: "Prompt",sans-serif;
   font-weight: 500;
 }
 .proyect-desc p {
+  padding: 0px 15px 0px 15px;
   font-size: 16px;
   color: #d3d3d4;
   font-family: "Prompt",sans-serif;
@@ -551,27 +552,31 @@ li > span {
       transition: all 0.8s;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 400px) {
   .proyect-content {
-    width: 100%;
+    padding: 0px;
   }
   .proyect {
     width: 100%;
+    flex: 0 0 auto;
+    padding: 0;
+    margin: 0
   }
-  .proyect-image > img {
-    width: 100%;
-  }
-  .proyect-image {
-    max-width: 80%;
+  .proyect-image img {
+    max-width: calc(100%)
   }
   .proyect-desc h2 {
+    width: 100%;
+    text-align: center;
     font-size: 20px;
     color: #fff;
     font-family: "Prompt",sans-serif;
     font-weight: 500;
   }
   .proyect-desc p {
-    font-size: 10px;
+    width: 100%;
+    padding: 0px 15px 0px 15px;
+    font-size: 15px;
     color: #d3d3d4;
     font-family: "Prompt",sans-serif;
     font-weight: 100;
@@ -592,7 +597,7 @@ li > span {
   gap: 10px;
 } 
 .badge-card {
-  width: 150px;
+  width: 170px;
   height:170px;
   /* perspective: 1000px; -> Efecto 3D */
     -webkit-user-select: none;
@@ -606,13 +611,13 @@ li > span {
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.8s;
+  transition: transform 0.4s;
   transform-style: preserve-3d;
 }
 .badge-card:hover {
   cursor: pointer;
 }
-.badge-card:active .badge-card-inner {
+.badge-card.flipped .badge-card-inner {
   transform: rotateY(180deg);
 } 
 .badge-card-front {
@@ -623,8 +628,28 @@ li > span {
   border-radius: 0px;
 }
 .badge-card-back {
-  background-color: #e20816af;
+  border: 1px solid #2e2e2e;
+  border-radius: 0px;
+  padding: 0px 13px 0px 13px;
+  text-align: left;
+  background-color: transparent;
   transform: rotateY(180deg);
+}
+.badge-card-back h1 {
+  padding: 13px 0 10px 0px;
+  color: #e20816 ;
+  font-family: "Prompt",sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;  
+}
+.badge-card-back h3 {
+  font-family: "Prompt",sans-serif;
+  color: #d3d3d4;
+  text-align:left;
+  font-size: 10px;
+  line-height: 1.8; 
 }
 .badge-card-front, .badge-card-back {
   position: absolute;
@@ -638,6 +663,7 @@ li > span {
   margin-bottom: 15px;
 }
 .badge-card-front p {
+  padding: 0px 10px 0px 10px; 
   color: #d3d3d4;
   text-align: center;
   font-family: "Prompt",sans-serif;
@@ -661,8 +687,15 @@ li > span {
 @media only screen and (max-width: 740px) {
   .badge-card {
       flex: 1 0 33%;
+      
   }
 }
+@media only screen and (max-width: 390px) {
+  .badge-card {
+      height: 200px;
+  }
+}
+
 /* -------------------------- Fin sección de insignias -------------------------- */
 
 /* -------------------------- Sección de contacto -------------------------- */
