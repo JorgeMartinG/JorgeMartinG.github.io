@@ -22,6 +22,7 @@ html, body {
   background-attachment:fixed
   /* padding:0px 5px 0px 5px;*/
 }
+
 img {
   -webkit-user-drag: none;
   -khtml-user-drag: none;
@@ -29,9 +30,30 @@ img {
   -o-user-drag: none;
   pointer-events: none;
 }
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
+}
+
+ul {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+li {
+  list-style: none;
+  white-space: nowrap;
+  align-items: baseline;
+  margin: 30px 0px 30px 0px;
+  font-family: "Rubik",sans-serif;
+  color: #fff;
+  font-size: 16px;
+}
+
+li > span {
+  padding-left: 10px;
+
 }
 /* HEADER
 ================================================== */
@@ -263,31 +285,25 @@ h1, h2, h3, h4, h5, h6 {
 .site-section{
   height:auto;
 }
-/*
-.site-main {
-  z-index: 1;
+
+.spacing {
+  width: 80%;
+  margin: 30px auto;
 }
 
-/*
- * Sections
-
-.site-section {
-  padding: 100px 0;
-}
-
-.site-section h2 {
-  font-family:;
-  margin: 0 auto;
-  font-size: 32px;
-  color: #196fc2;
+.section-title {
+  padding: 0px 0px 30px 0px;
   text-align: center;
+  color: #fff;
+  font-family: 'SF Pro Display', sans-serif;
+  letter-spacing: 10px;
+  font-weight: 100;
   text-transform: uppercase;
 }
-*/
 
-.about-section {
-  background: linear-gradient(145deg, #eeeeee, #c8c8c8);
-}
+/* -------------------------- Sección About -------------------------- */
+
+
 .about-title, .skills-title {
   padding:20px 0px 20px 0px;
   text-align: center;
@@ -296,6 +312,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing:10px;
   color:#232323
 }
+
 .about-me {
   width:85%;
   margin:0 auto;
@@ -309,12 +326,14 @@ h1, h2, h3, h4, h5, h6 {
                -33px -33px 66px #ffffff;
                */
 }
+
 .about-media {
   width:50%;
   padding-right:30px;
   flex:1 1;
   z-index:2;
 }
+
 .about-media iframe {
   width:100%;
   margin-bottom:30px;
@@ -322,12 +341,14 @@ h1, h2, h3, h4, h5, h6 {
   /* box-shadow: 10px 10px 20px 2px grey; */
   z-index:1;
 }
+
 .about-media img {
   width: 100%;
   /* border-radius:25px;
   /* box-shadow: 10px 10px 20px 2px grey; */
   z-index:1;
 }
+
 .about-content {
   width:50%;
   padding-left:30px;
@@ -336,19 +357,20 @@ h1, h2, h3, h4, h5, h6 {
   font-family:'SF Pro Display', sans-serif;
   z-index: 1;
 }
+
 .about-content p {
   padding:30px;
 }
+
 .avatar-frame {
   display: block;
   width:max-content;
   height:max-content;
   border-radius: 50%;
   margin:0px auto;
-  padding:10px;
-  background: linear-gradient(145deg, #eeeeee, #c8c8c8);background-color: #DEDEDE;
-  box-shadow:  33px 33px 66px #BDBDBD, -33px -33px 66px #FFFFFF;
+  padding:10px
 }
+
 .about-avatar {
   width:200px;
   height:200px;
@@ -357,15 +379,20 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url('../img/avatar.PNG');
   background-size: cover;
 }
+
 .about-text {
   width: 100%;
   font-size: 1em;
   text-align: justify;
+  font-family: "Prompt" , sans-serif;
+  color: #fff;
 }
+
 .about-button {
   text-align: center;
   margin-top:10%
 }
+
 .about-button input {
   margin:10px;
   padding:10px 30px 10px 30px;
@@ -411,125 +438,57 @@ h1, h2, h3, h4, h5, h6 {
     display:none;
   }
 }
-/* 
-.proyect-section {
-  background: #1E1E1E;
-  height:calc(100% - 60px);
-  padding-bottom:40px;
-}
-.proyect-title, .contact-title {
-  padding:20px 0px 20px 0px;
-  text-align: center;
-  font-family: 'League gothic';
-  font-size: 50px;
-  letter-spacing:10px;
-  color:#eeeeee
-}
-.proyect-row {
-  width:calc(85% - 100px);
-  height: auto;
-  padding:50px;
-  margin:0px auto;
-  display:flex;
-  flex-wrap:wrap;
-  background-repeat: no-repeat;
-  background-size: 100px 100px;
-}
-
-.proyect-column {
-  width:100%;
-  flex: 50%;
-  padding:20px;
-  align-items: center;
-
-}
-.proyect-image {
-  object-fit: cover;
-  width:auto;
-  height:300px;
-  background-image:url('https://picsum.photos/id/237/1920/1080');
-  background-size:contain;
-  background-repeat:round;
-}
-
-@media screen and (max-width: 992px) {
-  .proyect-title, .contact-title {
-    font-size:30px;
-  }
-  .proyect-row {
-    width:85%;
-    flex-direction: column;
-    padding:0
-  }
-}
-
-/* SKILLS SECTION */
-ul {
-  margin: 0 auto;
-  width: fit-content;
-}
-li {
-  list-style: none;
-  white-space: nowrap;
-  align-items: baseline;
-  margin: 30px 0px 30px 0px;
-  font-family: "Rubik",sans-serif;
-  color: #fff;
-  font-size: 16px;
-}
-li > span {
-  padding-left: 10px;
-
-}
 
 .skills-section {
   background: linear-gradient(145deg, #eeeeee, #c8c8c8);
 }
+/* -------------------------- Sección de insignias -------------------------- */
 /* -------------------------- Sección de proyectos -------------------------- */
 
 .proyect-section {
   width: fit-content;
   text-align: center;
 }
-.proyect-section h1 {
-  max-width: 100%;
-  display: inline-block;
-  padding: 30px;
-  color: #fff;
-  font-weight: 700;
-  text-transform: uppercase;
-}
+
 .proyect-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .proyect {
   flex: 0 0 400px;
   height: 80%;
   padding: 15px
 }
+
 .proyect-image {
+  height: 400px;
   overflow: hidden;
   border: 1px solid transparent;
   transition: all 0.2s;
   border-radius: 5px;
 }
+
 .proyect-image > img {
   width: 100%;
   transform: scale(1);
   transition: all 0.4s;
 }
+
 .proyect-image:hover > img {
   cursor: pointer;
   transform: scale(1.1); 
 }
+
 .proyect-image:hover {
   border: 1px solid rgba(255, 255, 255, 0.25); 
 }
+
 .proyect-desc {
   text-align: left;
 }
+
 .proyect-desc h2 {
   padding: 15px 15px 15px 15px;
   font-size: 22px;
@@ -538,6 +497,7 @@ li > span {
   font-weight: 500;
   text-transform: uppercase;
 }
+
 .proyect-desc p {
   padding: 0px 15px 0px 15px;
   font-size: 15px;
@@ -546,6 +506,7 @@ li > span {
   margin-bottom: 20px;
   line-height: 1.42857143;;
 }
+
 @media only screen and (max-width: 1220px) {
   .proyect-section {
       height: fit-content;
@@ -555,6 +516,7 @@ li > span {
       transition: all 0.8s;
   }
 }
+
 @media only screen and (max-width: 400px) {
   .proyect-content {
     padding: 0px;
@@ -571,29 +533,31 @@ li > span {
 }
 
 /* -------------------------- Fin sección de proyectos -------------------------- */
-.spacing {
-  width: 80%;
-  margin: 20px auto;
-  padding-bottom: 20px;
-}
 /* -------------------------- Sección de insignias -------------------------- */
+
 .badge-section {
-  width: fit-content;
+  width: 720px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  text-align: center;
 } 
+
 .badge-card {
-  width: 170px;
-  height:180px;
+  max-width: 170px;
+  min-width: 170px;
+  height: 180px;
+  flex: 1 0 21%;
   /* perspective: 1000px; -> Efecto 3D */
     -webkit-user-select: none;
     -webkit-touch-callout: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+  
 }
+
 .badge-card-inner {
   position: relative;
   width: 100%;
@@ -602,12 +566,14 @@ li > span {
   transition: transform 0.4s;
   transform-style: preserve-3d;
 }
+
 .badge-card:hover {
   cursor: pointer;
 }
 .badge-card.flipped .badge-card-inner {
   transform: rotateY(180deg);
 } 
+
 .badge-card-front {
   width: 150px;
   padding: 10px 0 10px;
@@ -615,6 +581,7 @@ li > span {
   background-color: transparent;
   border-radius: 0px;
 }
+
 .badge-card-back {
   border: 1px solid #2e2e2e;
   border-radius: 0px;
@@ -623,6 +590,7 @@ li > span {
   background-color: transparent;
   transform: rotateY(180deg);
 }
+
 .badge-card-back h1 {
   padding: 13px 0 10px 0px;
   color: #e20816 ;
@@ -632,6 +600,7 @@ li > span {
   text-align: center;
   text-transform: uppercase;  
 }
+
 .badge-card-back h3 {
   font-family: 'Open Sans', sans-serif;
   color: #d3d3d4;
@@ -639,6 +608,7 @@ li > span {
   font-size: 11px;
   line-height: 1.8; 
 }
+
 .badge-card-front, .badge-card-back {
   position: absolute;
   width: 100%;
@@ -646,10 +616,12 @@ li > span {
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
 }
+
 .badge-card-front img {
   width: 90px;
   margin-bottom: 15px;
 }
+
 .badge-card-front p {
   padding: 0px 10px 0px 10px; 
   color: #d3d3d4;
@@ -658,6 +630,7 @@ li > span {
   font-size: 12px;
   text-transform: uppercase;
 }
+
 /* ------------------- */
 .badge img {
   width: 90px;
@@ -675,6 +648,7 @@ li > span {
       flex: 1 0 20%;
   }
 }
+
 @media only screen and (max-width: 740px) {
   .badge-section {
     width: 100%;
@@ -696,6 +670,7 @@ li > span {
   background-color: #0e0e0e;
   text-align: center;
 }
+
 .contact {
   width:85%;
   margin:0 auto;
@@ -704,15 +679,18 @@ li > span {
   flex-wrap:wrap;
   border-radius:50px;
 }
+
 .contact-media {
   width:50%;
   padding-right:30px;
   flex:1 1;
   z-index:2;
 }
+
 .contact-media img {
   width:100%;
 }
+
 .contact-content {
   width:50%;
   padding-left:30px;
@@ -721,14 +699,17 @@ li > span {
   font-family:'SF Pro Display', sans-serif;
   z-index: 1;
 }
+
 .contact-content p {
   padding:30px;
   color: #ffffff;
   font-size:20px;
 }
+
 .contact-button {
   margin-top:10%
 }
+
 .contact-button input {
   margin:10px;
   padding:10px 50px 10px 50px;
@@ -741,6 +722,7 @@ li > span {
 /*
   box-shadow:  33px 33px 66px #BDBDBD, -33px -33px 66px #FFFFFF;*/
 }
+
 .networks {
   margin: 0 auto;
   width:85%;
@@ -750,9 +732,7 @@ li > span {
   font-size:40px;
   padding:40px 0px 40px 0px;
 }
-.networks i {
 
-}
 @media only screen and (max-width: 967px) {
   .contact-media {
     display:none;
@@ -761,27 +741,6 @@ li > span {
     width:100%;
   }
 }
-/*
- * Sections: Background;
-
- 
- .section-background {
-  padding:20px;
-  position: relative;
-  background-size: cover;
-  background-attachment: fixed;
-  height:100%;
-  text-align: center;
-}
-/* Sections background: Quote 
-
-
-.section-quote {
-  background-color: #000000;
-  background-image: url("../img/diagmonds-light.png");
-  background-size: auto;
-}
-
 
 /* width */
 ::-webkit-scrollbar {
