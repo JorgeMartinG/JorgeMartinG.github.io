@@ -783,6 +783,15 @@ a:visited, a:link {
 .data-button:hover ~ .copy-msg {
   visibility: visible;
 }
+@media only screen and (max-width: 967px) {
+  .fa-copy {
+    color: #b0b0b0;
+  }
+}
+
+
+
+
 
 /* width */
 ::-webkit-scrollbar {
