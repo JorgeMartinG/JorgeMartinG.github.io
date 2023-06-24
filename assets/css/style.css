@@ -63,7 +63,7 @@ a {
 }
 a:hover {
   color: #fff;
-  text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff
+  text-shadow: 0px 0px 15px #fff
 }
 a:visited, a:link {
   color: #fff;
