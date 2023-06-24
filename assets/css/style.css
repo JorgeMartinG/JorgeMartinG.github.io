@@ -54,7 +54,20 @@ li {
 
 li > span {
   padding-left: 10px;
-
+}
+a {
+  font-family: "Rubik",sans-serif;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+}
+a:hover {
+  color: #fff;
+  text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff
+}
+a:visited, a:link {
+  color: #fff;
+  text-decoration: none;
 }
 /* HEADER
 ================================================== */
