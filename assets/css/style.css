@@ -49,6 +49,7 @@ li {
   font-family: "Rubik",sans-serif;
   color: #fff;
   font-size: 16px;
+  position: relative;
 }
 
 li > span {
@@ -481,10 +482,6 @@ li > span {
   transform: scale(1.1); 
 }
 
-.proyect-image:hover {
-  border: 1px solid rgba(255, 255, 255, 0.25); 
-}
-
 .proyect-desc {
   text-align: left;
 }
@@ -504,7 +501,8 @@ li > span {
   color: #d3d3d4;
   font-family: 'Open Sans', sans-serif;
   margin-bottom: 20px;
-  line-height: 1.42857143;;
+  line-height: 1.42857143;
+  text-wrap: balance;
 }
 
 @media only screen and (max-width: 1220px) {
@@ -542,6 +540,7 @@ li > span {
   flex-wrap: wrap;
   gap: 10px;
   text-align: center;
+  padding-top: 20px;
 } 
 
 .badge-card {
@@ -589,6 +588,7 @@ li > span {
   text-align: left;
   background-color: transparent;
   transform: rotateY(180deg);
+  text-wrap: balance;
 }
 
 .badge-card-back h1 {
@@ -667,28 +667,15 @@ li > span {
 
 .contact-section {
   width: 100%;
-  background-color: #0e0e0e;
-  text-align: center;
+  text-align: left;
 }
 
 .contact {
-  width:85%;
-  margin:0 auto;
-  padding:30px;
-  display:flex;
-  flex-wrap:wrap;
-  border-radius:50px;
-}
-
-.contact-media {
-  width:50%;
-  padding-right:30px;
-  flex:1 1;
-  z-index:2;
-}
-
-.contact-media img {
-  width:100%;
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .contact-content {
@@ -722,7 +709,13 @@ li > span {
 /*
   box-shadow:  33px 33px 66px #BDBDBD, -33px -33px 66px #FFFFFF;*/
 }
-
+.data-button {
+  background-color: transparent;
+  border: 0;
+}
+.data-button:hover > .copy-msg-1 {
+  display: block;
+}
 .networks {
   margin: 0 auto;
   width:85%;
@@ -732,6 +725,27 @@ li > span {
   font-size:40px;
   padding:40px 0px 40px 0px;
 }
+/* TOOLTIP */
+
+.copy-msg {
+  visibility: hidden;
+  display: inline;
+  background-color: #323232;
+  color: #e4e4e4;
+  text-align: center;
+  border-radius: 6px;
+  padding: 3px 5px;
+  position: absolute;
+  font-size: 12px;
+  }
+.copy-msg-1 {
+  visibility: block;
+}
+.copy-msg-2 {
+  display: none;
+}
+
+/* FIN TOOLTIP */
 
 @media only screen and (max-width: 967px) {
   .contact-media {
@@ -740,6 +754,21 @@ li > span {
   .contact {
     width:100%;
   }
+}
+/* -------------------- icons ---------------------- */
+.fa-copy {
+  color: #353535;
+  padding: 5px
+}
+.fa-check {
+  color: #00bf06;
+}
+.data-button:hover > .fa-copy {
+  cursor: pointer;
+  color: #b0b0b0
+}
+.data-button:hover ~ .copy-msg {
+  visibility: visible;
 }
 
 /* width */

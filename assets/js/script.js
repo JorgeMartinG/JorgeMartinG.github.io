@@ -31,21 +31,34 @@ $(function () {
     $(document).on('click', '.page-scroll a', function(event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top - 60
+            scrollTop: $($anchor.attr('href')).offset().top - 155
         }, 800, 'easeInOutExpo');
         event.preventDefault();
     });
 }());
-/*
-var cards = document.querySelectorAll('.badge-card');
 
-[...cards].forEach((card)=>{
-  card.addEventListener( 'click', function() {
-    if (card.getElementsByClassName)
-    card.classList.toggle('flipped');
-  });
-});
-*/
+
+function copyToClipboard(text, btnId) {
+    navigator.clipboard.writeText(text);
+
+        const copyMsg = document.querySelector('#copy-btn-' + btnId);
+        const copyMsg1 = copyMsg.querySelector('.copy-msg-1');
+        const copyMsg2 = copyMsg.querySelector('.copy-msg-2');
+
+    copyMsg1.style.display = 'none'; // Oculta "Copy to clipboard"
+    copyMsg2.style.display = 'inline'; // Muestra "Copied!"
+}
+
+function resetCopyMsg(btnId) {
+
+    const copyMsg = document.querySelector('#copy-btn-' + btnId);
+    const copyMsg1 = copyMsg.querySelector('.copy-msg-1');
+    const copyMsg2 = copyMsg.querySelector('.copy-msg-2');
+
+    copyMsg1.style.display = 'inline';
+    copyMsg2.style.display = 'none';
+}
+
 const cards = document.querySelectorAll('.badge-card');
 
 for (const card of cards) {

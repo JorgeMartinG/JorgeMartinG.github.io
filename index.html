@@ -313,28 +313,39 @@ x.innerHTML = "Browser width: " + w + ", height: " + h + ".";
         </div>
     </section>
     <hr class="spacing">
-<!-- INICIO DE SECCION - CONTACTO 
+<!-- INICIO DE SECCION - CONTACTO -->
     <section class="site-section" id="contact">
+        <h1 class="section-title">Contacto</h1>
         <div class="contact-section">
-            <div class="contact-title">
-                <span>Contacto</span>
-            </div>
             <div class="contact">
-                <div class="contact-media">
-                    <div class="contact-image">
-                        <img src="assets/img/paisaje-genérico.jpg">
-                    </div>
-                </div>
                 <div class="contact-content">
                     <div class="contact-data">
                         <ul>
                             <li>
                                 <i class="fa-solid fa-phone fa-sm" style="color: #fff"></i>
                                 <span>+34 633 011 328</span>
+                                <button onclick="copyToClipboard('+34 633 011 328', 1)" onmouseout="resetCopyMsg(1)" class="data-button">
+                                    <i class="fa-solid fa-copy"></i>
+                                </button>
+                            <div class="copy-msg" id="copy-btn-1">
+                                <span class="copy-msg-1">Copiar</span>
+                                <span class="copy-msg-2">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                             </div>
                             </li>
                             <li>
                                 <i class="fa-solid fa-envelope fa-sm" style="color: #fff"></i>
                                 <span>amerinopalomo@gmail.com</span>
+                                <button onclick="copyToClipboard('amerinopalomo@gmail.com', 2)" onmouseout="resetCopyMsg(2)" class="data-button">
+                                    <i class="fa-solid fa-copy"></i>
+                                </button>
+                                <div class="copy-msg" id="copy-btn-2">
+                                    <span class="copy-msg-1">Copiar</span>
+                                    <span class="copy-msg-2">
+                                        <i class="fa-solid fa-check"></i>
+                                    </span>
+                                 </div>
                             </li>
                             <li>
                                 <i class="fa-sharp fa-solid fa-location-dot fa-sm" style="color: #fff;"></i>
